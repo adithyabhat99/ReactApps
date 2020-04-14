@@ -1,1 +1,1 @@
-# Creating Single Page Application(SPA) using React-Router
+# Basic Single Page Application(SPA) using React-Router
