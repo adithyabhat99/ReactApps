@@ -2,6 +2,7 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import youtube from "./api/youtube";
 import { SearchBar, VideoList, VideoDetail } from "./components";
+import * as data from "./api/key.json"
 
 class App extends React.Component{
 
@@ -18,7 +19,7 @@ class App extends React.Component{
         const response = await youtube.get("search",{params:{
             part:"snippet",
             maxResults:5,
-            key:"AIzaSyAoyfOi7nACCmZXG-tJda2h1kE8S7Zg3qU",
+            key:data["key"],
             q:searchTerm,
         }});
         this.setState({ videos:response.data.items, selectedVideo:response.data.items[0] });
