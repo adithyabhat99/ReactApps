@@ -26,7 +26,7 @@ class RoomProvider extends Component {
       let response = await Client.getEntries({
         content_type: "beachResortRooms",
         // order is optional
-        order: "sys.createdAt"
+        order: "fields.price"
       });
       // Add some local items
       const items = [...localItems, ...response.items];
